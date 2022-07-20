@@ -14,6 +14,8 @@ public class UserRegistration {
         user.firstname();
         user.lastname();
         user.email();
+        user.MobileNumber();
+        user.password();
     }
     public boolean firstname(){
         System.out.println("Enter First Name: ");
@@ -58,6 +60,15 @@ public class UserRegistration {
         String MobileNumber = sc.next();
         boolean valid = MobileNumber.matches("^[1-9][0-9][1-9]{10}$" );
         System.out.println("Mobile Number is: " +MobileNumber +"\nvalid: " + valid);
+        System.out.println(valid);
+    }
+    /**
+     * Password Matching Pattern
+     */
+    public void password(){
+        System.out.println("Enter Password: ");
+        String pass1 = sc.next();
+        boolean valid = pass1.matches("^(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*()_+=-{};'<>,./?~`]{8,}$" + "(?=\\S+$).{8,}$");
         System.out.println(valid);
     }
 }
