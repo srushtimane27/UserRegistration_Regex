@@ -18,4 +18,11 @@ public class UserRegistration {
         return valid;
 
     }
+    public boolean lastname(){
+        System.out.println("Enter Last Name: ");
+        String name = sc.next();
+        boolean valid = name.matches("^[A-Z][a-z]{3,}");
+        System.out.println("Last Name is: "+name +"\nvalid: " + valid);
+        return valid;
+    }
 }
